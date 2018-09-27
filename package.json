@@ -1,0 +1,23 @@
+{
+  "name": "LIRI",
+  "version": "1.0.0",
+  "description": "LIRI is the console log version of Siri, LIRI will search Spotify for songs, Bands in Town for concerts, and OMDB for movies.",
+  "main": "liri.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yiqi0110/LIRI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yiqi0110/LIRI/issues"
+  },
+  "homepage": "https://github.com/yiqi0110/LIRI#readme",
+  "dependencies": {
+    "node-spotify-api": "^1.0.7"
+  }
+}
