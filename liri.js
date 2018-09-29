@@ -119,13 +119,8 @@ function whatEverNotAPI() {
         }
         // console.log(data);
         var dataArr = data.split(", ");
-
-        // console.log(dataArr);
-
-        for (var i = 0; i < dataArr.length; i++) {
-            console.log(dataArr[i]);
-            writeToTxt(dataArr[i], api);
-        }
+        apiCommands = dataArr[1];
+        spotifyAPI(apiCommands);
     });
 };
 
