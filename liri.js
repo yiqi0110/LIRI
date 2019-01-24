@@ -33,6 +33,8 @@ if (api === "concert-this") {
     } else {
         spotifyAPI(apiCommands);
     }
+} else if (api === "venue") {
+    venueAPI(apiCommands);
 } else if (api === "movie-this") {
     // movie stuff
     if (!apiCommands) {
@@ -48,6 +50,23 @@ if (api === "concert-this") {
 };
 
 // Functions ==================================================
+
+function venueAPI(apiCommands) {
+    var artist = apiCommands;
+    var bandsInTownURL = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp";
+    request(bandsInTownURL, function (err, response, body) {
+        if (!err && response.statusCode === 200) {
+            console.log(JSON.parse(body));
+
+        } else {
+            console.log("Sorry no aritist or band by that name.");
+            console.log(err);
+        }
+    })
+};
+
+
+
 function concertAPI(apiCommands) {
     var artist = apiCommands;
     var bandsInTownURL = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp";
